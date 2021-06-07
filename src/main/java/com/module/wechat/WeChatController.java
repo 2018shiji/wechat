@@ -50,6 +50,7 @@ public class WeChatController {
         StringBuilder sb = new StringBuilder();
         Arrays.stream(array).forEach(stringItem -> sb.append(stringItem));
 
+
         MessageDigest md = MessageDigest.getInstance("SHA-1");
         byte[] digest = md.digest(sb.toString().getBytes());
         String result = ByteStringUtil.byteToString(digest);
